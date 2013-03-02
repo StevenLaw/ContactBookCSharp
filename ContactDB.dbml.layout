@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ContactDB">
+  <DataContextMoniker Name="/ContactDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="7c3bfc23-fd21-4c3d-9b34-c92cb70df58a" absoluteBounds="3.5, 1, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/ContactDBDataContext/Contact" />
+      <nestedChildShapes>
+        <elementListCompartment Id="00991188-973d-43bf-9bb5-0cf87d75736d" absoluteBounds="3.515, 1.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bb903d8e-74c8-4f6a-9576-8ef6857584f5" absoluteBounds="0.75, 1.625, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/ContactDBDataContext/Province" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5837639e-b079-41c7-baf0-82f52289a2d5" absoluteBounds="0.765, 2.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.22199625651042); (3.5 : 2.22199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ContactDBDataContext/Province/Province_Contact" />
+      <nodes>
+        <classShapeMoniker Id="bb903d8e-74c8-4f6a-9576-8ef6857584f5" />
+        <classShapeMoniker Id="7c3bfc23-fd21-4c3d-9b34-c92cb70df58a" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
