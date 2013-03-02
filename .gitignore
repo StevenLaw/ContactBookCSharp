@@ -3,6 +3,7 @@ build/
 [Bb]in
 [Dd]ebug*/
 obj/
+[Pp]ublish*/
 [Rr]elease*/
 _ReSharper*/
 [Tt]est[Rr]esult
