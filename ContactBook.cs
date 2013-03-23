@@ -51,6 +51,8 @@ namespace ContactBook
             dgvTable.ClearSelection();
 
             SetButtonsEnabled();
+
+            LoadSettings();
         }
 
         /// <summary>
@@ -182,6 +184,110 @@ namespace ContactBook
                     cmsUpdate.Enabled = false;
                 }
             }
+        }
+
+        private void LoadSettings()
+        {
+            // Contact Id
+            if (Properties.Settings.Default.ContactIdVisible)
+            {
+                dgvTable.Columns["Id"].Visible = true;
+                contactIdToolStripMenuItem.Checked = true;
+            }
+            else
+            {
+                dgvTable.Columns["Id"].Visible = false;
+                contactIdToolStripMenuItem.Checked = false;
+            }
+            // First Name
+            if (Properties.Settings.Default.FirstNameVisible)
+            {
+                dgvTable.Columns["FName"].Visible = true;
+                firstNameToolStripMenuItem.Checked = true;
+            }
+            else
+            {
+                dgvTable.Columns["FName"].Visible = false;
+                firstNameToolStripMenuItem.Checked = false;
+            }
+            // Last Name
+            if (Properties.Settings.Default.LastNameVisible)
+            {
+                dgvTable.Columns["LName"].Visible = true;
+                lastNameToolStripMenuItem.Checked = true;
+            }
+            else
+            {
+                dgvTable.Columns["LName"].Visible = false;
+                lastNameToolStripMenuItem.Checked = false;
+            }
+            // Street
+            if (Properties.Settings.Default.StreetVisible)
+            {
+                dgvTable.Columns["Street"].Visible = true;
+                streetToolStripMenuItem.Checked = true;
+            }
+            else
+            {
+                dgvTable.Columns["Street"].Visible = false;
+                streetToolStripMenuItem.Checked = false;
+            }
+            // City
+            if (Properties.Settings.Default.CityVisible)
+            {
+                dgvTable.Columns["City"].Visible = true;
+                cityToolStripMenuItem.Checked = true;
+            }
+            else
+            {
+                dgvTable.Columns["City"].Visible = false;
+                cityToolStripMenuItem.Checked = false;
+            }
+            // Province
+            if (Properties.Settings.Default.ProvinceVisible)
+            {
+                dgvTable.Columns["Province"].Visible = true;
+                provinceToolStripMenuItem.Checked = true;
+            }
+            else
+            {
+                dgvTable.Columns["Province"].Visible = false;
+                provinceToolStripMenuItem.Checked = false;
+            }
+            // Postal Code
+            if (Properties.Settings.Default.PostalCodeVisible)
+            {
+                dgvTable.Columns["PostalCode"].Visible = true;
+                postalCodeToolStripMenuItem.Checked = true;
+            }
+            else
+            {
+                dgvTable.Columns["PostalCode"].Visible = false;
+                postalCodeToolStripMenuItem.Checked = false;
+            }
+            // Phone
+            if (Properties.Settings.Default.PhoneVisible)
+            {
+                dgvTable.Columns["Phone"].Visible = true;
+                phoneNumberToolStripMenuItem.Checked = true;
+            }
+            else
+            {
+                dgvTable.Columns["Phone"].Visible = false;
+                phoneNumberToolStripMenuItem.Checked = false;
+            }
+            // Email
+            if (Properties.Settings.Default.ContactIdVisible)
+            {
+                dgvTable.Columns["Id"].Visible = true;
+                contactIdToolStripMenuItem.Checked = true;
+            }
+            else
+            {
+                dgvTable.Columns["Id"].Visible = false;
+                contactIdToolStripMenuItem.Checked = false;
+            }
+
         }
 
         /// <summary>
@@ -519,9 +625,17 @@ namespace ContactBook
         /// <param name="e">The arguments of the event</param>
         private void btnDataBindRemarks_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("In this exercise I found that using a databinding in situation " +
+            MessageBox.Show("In this exercise I found that using a databinding in this situation " +
                 "is simply more trouble than it is worth.\n" +
-                "Not the least being that the flexibility is highly limited.");
+                "At the very least the flexibility is highly limited.\n\n" + 
+                "It may be more useful if I am just displaying the data.  The updates work well though.");
+        }
+
+        private void settings_Click(object sender, EventArgs e)
+        {
+            SettingsDialog sd = new SettingsDialog();
+            sd.ShowDialog();
+            LoadSettings();
         }
     }
 }

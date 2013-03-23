@@ -33,5 +33,113 @@ namespace ContactBook.Properties {
                 return ((string)(this["TestConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ContactIdVisible {
+            get {
+                return ((bool)(this["ContactIdVisible"]));
+            }
+            set {
+                this["ContactIdVisible"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool FirstNameVisible {
+            get {
+                return ((bool)(this["FirstNameVisible"]));
+            }
+            set {
+                this["FirstNameVisible"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool LastNameVisible {
+            get {
+                return ((bool)(this["LastNameVisible"]));
+            }
+            set {
+                this["LastNameVisible"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool StreetVisible {
+            get {
+                return ((bool)(this["StreetVisible"]));
+            }
+            set {
+                this["StreetVisible"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool CityVisible {
+            get {
+                return ((bool)(this["CityVisible"]));
+            }
+            set {
+                this["CityVisible"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool ProvinceVisible {
+            get {
+                return ((bool)(this["ProvinceVisible"]));
+            }
+            set {
+                this["ProvinceVisible"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool PostalCodeVisible {
+            get {
+                return ((bool)(this["PostalCodeVisible"]));
+            }
+            set {
+                this["PostalCodeVisible"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool PhoneVisible {
+            get {
+                return ((bool)(this["PhoneVisible"]));
+            }
+            set {
+                this["PhoneVisible"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool EmailVisible {
+            get {
+                return ((bool)(this["EmailVisible"]));
+            }
+            set {
+                this["EmailVisible"] = value;
+            }
+        }
     }
 }

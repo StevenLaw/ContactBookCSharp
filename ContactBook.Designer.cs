@@ -61,6 +61,7 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tpDataBound = new System.Windows.Forms.TabPage();
+            this.btnDataBindRemarks = new System.Windows.Forms.Button();
             this.toolStripAlt = new System.Windows.Forms.ToolStrip();
             this.tsbAddAlt = new System.Windows.Forms.ToolStripButton();
             this.tsbDeleteAlt = new System.Windows.Forms.ToolStripButton();
@@ -69,6 +70,7 @@
             this.tsbSettingsAlt = new System.Windows.Forms.ToolStripButton();
             this.dgvTableAlt = new System.Windows.Forms.DataGridView();
             this.tpContactList = new System.Windows.Forms.TabPage();
+            this.cmbFilter = new System.Windows.Forms.ComboBox();
             this.toolStripMain = new System.Windows.Forms.ToolStrip();
             this.tsbAddMain = new System.Windows.Forms.ToolStripButton();
             this.tsbUpdateMain = new System.Windows.Forms.ToolStripButton();
@@ -90,8 +92,6 @@
             this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.cmbFilter = new System.Windows.Forms.ComboBox();
-            this.btnDataBindRemarks = new System.Windows.Forms.Button();
             this.cmsTable.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tpDataBound.SuspendLayout();
@@ -194,6 +194,7 @@
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settings_Click);
             // 
             // toolStripSeparator3
             // 
@@ -375,6 +376,16 @@
             this.tpDataBound.Text = "Data Bound";
             this.tpDataBound.UseVisualStyleBackColor = true;
             // 
+            // btnDataBindRemarks
+            // 
+            this.btnDataBindRemarks.Location = new System.Drawing.Point(7, 493);
+            this.btnDataBindRemarks.Name = "btnDataBindRemarks";
+            this.btnDataBindRemarks.Size = new System.Drawing.Size(159, 23);
+            this.btnDataBindRemarks.TabIndex = 5;
+            this.btnDataBindRemarks.Text = "Data Binding Remarks";
+            this.btnDataBindRemarks.UseVisualStyleBackColor = true;
+            this.btnDataBindRemarks.Click += new System.EventHandler(this.btnDataBindRemarks_Click);
+            // 
             // toolStripAlt
             // 
             this.toolStripAlt.AutoSize = false;
@@ -474,6 +485,17 @@
             this.tpContactList.Text = "Contact List";
             this.tpContactList.UseVisualStyleBackColor = true;
             // 
+            // cmbFilter
+            // 
+            this.cmbFilter.DisplayMember = "ProvinceCode";
+            this.cmbFilter.FormattingEnabled = true;
+            this.cmbFilter.Location = new System.Drawing.Point(814, 492);
+            this.cmbFilter.Name = "cmbFilter";
+            this.cmbFilter.Size = new System.Drawing.Size(121, 21);
+            this.cmbFilter.TabIndex = 5;
+            this.cmbFilter.ValueMember = "ProvinceCode";
+            this.cmbFilter.SelectedIndexChanged += new System.EventHandler(this.cmbFilter_SelectedIndexChanged);
+            // 
             // toolStripMain
             // 
             this.toolStripMain.AutoSize = false;
@@ -556,6 +578,7 @@
             this.tsbSettingsMain.Size = new System.Drawing.Size(15, 14);
             this.tsbSettingsMain.Text = "Settings";
             this.tsbSettingsMain.ToolTipText = "Settings";
+            this.tsbSettingsMain.Click += new System.EventHandler(this.settings_Click);
             // 
             // btnDelete
             // 
@@ -688,26 +711,6 @@
             this.tabControl1.Size = new System.Drawing.Size(952, 548);
             this.tabControl1.TabIndex = 1;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
-            // 
-            // cmbFilter
-            // 
-            this.cmbFilter.FormattingEnabled = true;
-            this.cmbFilter.Location = new System.Drawing.Point(814, 492);
-            this.cmbFilter.Name = "cmbFilter";
-            this.cmbFilter.Size = new System.Drawing.Size(121, 21);
-            this.cmbFilter.TabIndex = 5;
-            this.cmbFilter.ValueMember = "ProvinceCode";
-            this.cmbFilter.SelectedIndexChanged += new System.EventHandler(this.cmbFilter_SelectedIndexChanged);
-            // 
-            // btnDataBindRemarks
-            // 
-            this.btnDataBindRemarks.Location = new System.Drawing.Point(7, 493);
-            this.btnDataBindRemarks.Name = "btnDataBindRemarks";
-            this.btnDataBindRemarks.Size = new System.Drawing.Size(159, 23);
-            this.btnDataBindRemarks.TabIndex = 5;
-            this.btnDataBindRemarks.Text = "Data Binding Remarks";
-            this.btnDataBindRemarks.UseVisualStyleBackColor = true;
-            this.btnDataBindRemarks.Click += new System.EventHandler(this.btnDataBindRemarks_Click);
             // 
             // ContactBook
             // 
